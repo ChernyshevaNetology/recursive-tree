@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
-const ExpandLabel = ({ children, expanded, onExpand }) => {
+const ExpandLabel = React.memo(({ children, expanded, onExpand }) => {
   if (children?.length > 0) {
     return (
       <FontAwesomeIcon
@@ -14,6 +14,6 @@ const ExpandLabel = ({ children, expanded, onExpand }) => {
   }
 
   return null;
-};
+});
 
 export { ExpandLabel };

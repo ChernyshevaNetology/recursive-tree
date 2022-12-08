@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Entry } from "./components/Entry";
-import { v4 as uuidv4 } from "uuid";
+// import { Entry } from "./components/Entry";
 
 const files = {
   children: [
@@ -37,16 +36,18 @@ const files = {
 export type TEntry = {
   name: string;
   children: TEntry[] | undefined;
+  depth: number;
 };
 
 const App = () => {
   return (
     <div className="App">
-      {files.children.map((entry: TEntry) => {
-        return <Entry name={entry.name} children={entry.children} />;
-      })}
+      hey
+      {/*{files.children.map((entry: TEntry) => {*/}
+      {/*  return <Entry name={entry.name} children={entry.children} depth={1} />;*/}
+      {/*})}*/}
     </div>
   );
 };
 
-export default App;
+export { App };
